@@ -18,7 +18,7 @@ const routes: RouteProps[] = [
     path: '*',
     children: (
       <div className="page page_layout_not-found">
-
+        <h1>404 - Not found</h1>
       </div>
     )
   }
