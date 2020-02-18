@@ -8,18 +8,16 @@ import routes from './routes';
  */
 function App() {
   return (
-    <div className="app">
-      <BrowserRouter>
-        <Switch>
-          {routes.map((route, routeIndex) => (
-            <Route
-              key={routeIndex}
-              {...route}
-            />
-          ))}
-        </Switch>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        {routes.map((route, routeIndex) => (
+          <Route
+            key={routeIndex}
+            {...route}
+          />
+        ))}
+      </Switch>
+    </BrowserRouter>
   );
 }
 
