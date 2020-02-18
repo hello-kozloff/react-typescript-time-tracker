@@ -1,4 +1,6 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import routes from './routes';
 
 /**
  * The root application component.
@@ -6,7 +8,18 @@ import React from 'react';
  */
 function App() {
   return (
-    <div className="app" />
+    <div className="app">
+      <BrowserRouter>
+        <Switch>
+          {routes.map((route, routeIndex) => (
+            <Route
+              key={routeIndex}
+              {...route}
+            />
+          ))}
+        </Switch>
+      </BrowserRouter>
+    </div>
   );
 }
 
